@@ -1,0 +1,81 @@
+<!-- SIDEBAR: keep compact and subtle (fixed width) -->
+<aside id="sidebar" class="w-20 md:w-64 bg-white h-screen border-r hidden md:block">
+  <div class="h-full flex flex-col">
+    <div class="p-4 flex items-center space-x-3">
+      <div class="w-10 h-10 bg-yellow-300 rounded flex items-center justify-center text-white font-bold">RP</div>
+      <div class="hidden md:block">
+        <div class="text-sm font-semibold">Restaurant POS</div>
+        <div class="text-xs muted">Admin panel</div>
+      </div>
+    </div>
+
+    <nav class="mt-4 flex-1">
+      <ul class="space-y-1">
+        <li>
+          <a href="{% url 'dashboard' %}" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50">
+            <!-- home icon -->
+            <svg class="w-5 h-5 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9 9 9M4 10v10h6v-6h4v6h6V10"/>
+            </svg>
+            <span class="hidden md:inline">Dashboard</span>
+          </a>
+        </li>
+
+        <li><a href="{% url 'menu_list' %}" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50">
+          <svg class="w-5 h-5 text-gray-600"><!-- icon --></svg>
+          <span class="hidden md:inline">Menu</span></a></li>
+
+        <li><a href="{% url 'order_list' %}" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50">
+          <svg class="w-5 h-5 text-gray-600"></svg>
+          <span class="hidden md:inline">Orders</span></a></li>
+
+        <li><a href="{% url 'inventory_list' %}" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50">
+          <svg class="w-5 h-5 text-gray-600"></svg>
+          <span class="hidden md:inline">Inventory</span></a></li>
+
+        <li><a href="{% url 'report_list' %}" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50">
+          <svg class="w-5 h-5 text-gray-600"></svg>
+          <span class="hidden md:inline">Reports</span></a></li>
+
+        <li><a href="{% url 'employee_list' %}" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50">
+          <svg class="w-5 h-5 text-gray-600"></svg>
+          <span class="hidden md:inline">Employees</span></a></li>
+      </ul>
+    </nav>
+
+    <div class="p-4">
+      <a href="{% url 'logout' %}" class="w-full block text-center py-2 rounded-lg bg-red-50 text-red-600">Logout</a>
+    </div>
+  </div>
+</aside>
+
+<!-- small mobile sidebar (toggle script can show/hide) -->
+<aside id="mobile-sidebar" class="md:hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform -translate-x-full transition-transform">
+  <div class="p-4">
+    <div class="flex items-center justify-between">
+      <div class="font-semibold">Restaurant POS</div>
+      <button id="mobile-close-btn" class="p-1 rounded hover:bg-gray-100">
+        ✕
+      </button>
+    </div>
+    <nav class="mt-4">
+      <ul class="space-y-1">
+        <li><a href="{% url 'dashboard' %}" class="block py-2">Dashboard</a></li>
+        <li><a href="{% url 'menu_list' %}" class="block py-2">Menu</a></li>
+        <li><a href="{% url 'order_list' %}" class="block py-2">Orders</a></li>
+        <li><a href="{% url 'inventory_list' %}" class="block py-2">Inventory</a></li>
+      </ul>
+    </nav>
+  </div>
+</aside>
+
+<script>
+  // small mobile open/close logic
+  document.addEventListener('DOMContentLoaded', function(){
+    const openBtn = document.getElementById('mobile-open-btn');
+    const closeBtn = document.getElementById('mobile-close-btn');
+    const mobile = document.getElementById('mobile-sidebar');
+    if(openBtn) openBtn.addEventListener('click', ()=> mobile.style.transform = 'translateX(0)');
+    if(closeBtn) closeBtn.addEventListener('click', ()=> mobile.style.transform = 'translateX(-100%)');
+  });
+</script>

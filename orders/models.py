@@ -12,6 +12,9 @@ class Table(models.Model):
     class Meta:
         unique_together = ('tenant', 'number')
 
+    def __str__(self):
+        return f"{self.number} - {self.tenant.name}"
+
 class Order(models.Model):
     STATUS_CHOICES = [
         ('pending', 'Pending'),
@@ -30,14 +33,46 @@ class Order(models.Model):
         indexes = [models.Index(fields=['tenant', 'status', 'created_at'])]
 
     
+    def __str__(self):
+        return f"{self.status} - {self.tenant.name}"
+
+    
     def get_absolute_url(self):
         return reverse('order_detail', kwargs={'pk': self.pk})
+
+    
+    # in Order model
+
+    def update_total(self):
+        total = sum(item.subtotal for item in self.items.all())
+        self.total = total
+        self.save(update_fields=['total'])
+
+
+
+    
 
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
     menu_item = models.ForeignKey(MenuItem, on_delete=models.SET_NULL, null=True)
     quantity = models.PositiveIntegerField(default=1)
     price = models.DecimalField(max_digits=10, decimal_places=2)  # Snapshot of price at order time
+
+
+
+    def save(self, *args, **kwargs):
+        if self.price is None and self.menu_item is not None:
+            self.price = self.menu_item.price  # Take snapshot of price
+        super().save(*args, **kwargs)
+        self.update_order_total()
+
+    def delete(self, *args, **kwargs):
+        order = self.order
+        super().delete(*args, **kwargs)
+        order.update_total()
+
+    def update_order_total(self):
+        self.order.update_total()
 
     @property
     def subtotal(self):

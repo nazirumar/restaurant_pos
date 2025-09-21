@@ -1,53 +1,96 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Restaurant POS{% endblock %}</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{% block title %}Restaurant POS{% endblock %}</title>
+
+  <!-- Tailwind (quick CDN for prototype) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Optional: heroicons for SVG icons -->
+  <style>
+    /* tiny helpers */
+    .card { @apply bg-white rounded-2xl shadow-md p-4; }
+    .muted { color: #9ca3af; } /* gray-400 */
+  </style>
+
+  {% block head %}{% endblock %}
 </head>
-<body class="bg-gray-100 flex flex-col min-h-screen">
-    <!-- Navigation Bar -->
-    <nav class="bg-indigo-600 text-white p-4 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="{% url 'dashboard' %}" class="text-xl font-bold">Restaurant POS</a>
-            <div class="space-x-4">
-                {% if user.is_authenticated %}
-                    <span class="text-sm">Welcome, {{ user.username }} ({{ user.role }}) | Tenant: {{ request.tenant.name|default:"N/A" }}</span>
-                    <a href="{% url 'menu_list' %}" class="hover:underline">Menu</a>
-                    <a href="{% url 'order_list' %}" class="hover:underline">Orders</a>
-                    <a href="{% url 'inventory_list' %}" class="hover:underline">Inventory</a>
-                    <a href="{% url 'report_list' %}" class="hover:underline">Reports</a>
-                    {% if user.role in 'owner,manager' %}
-                        <a href="{% url 'employee_list' %}" class="hover:underline">Employees</a>
-                    {% endif %}
-                    <a href="{% url 'logout' %}" class="hover:underline">Logout</a>
-                {% else %}
-                    <a href="{% url 'login' %}" class="hover:underline">Login</a>
-                    <a href="{% url 'signup' %}" class="hover:underline">Sign Up</a>
-                {% endif %}
+<body class="bg-gray-50 min-h-screen font-sans text-gray-800">
+
+  <div class="flex">
+    <!-- SIDEBAR -->
+    {% include "includes/sidebar.html" %}
+
+    <div class="flex-1 min-h-screen flex flex-col">
+      <!-- TOP NAV -->
+      <header class="w-full bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16">
+            <div class="flex items-center space-x-4">
+              <!-- small hamburger for mobile -->
+              <button id="mobile-open-btn" class="md:hidden p-2 rounded hover:bg-gray-100">
+                <!-- svg -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+              </button>
+              <h1 class="text-xl font-semibold">{% block page_title %}Dashboard{% endblock %}</h1>
+              <div class="hidden md:block ml-6">
+                <p class="text-sm text-gray-500">French fry restaurant</p>
+              </div>
             </div>
+
+            <div class="flex items-center space-x-4">
+              <!-- search -->
+              <div class="hidden sm:flex items-center bg-gray-100 rounded-full px-3 py-1">
+                <svg class="w-5 h-5 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"/>
+                </svg>
+                <input type="text" placeholder="Search" class="bg-transparent outline-none text-sm" />
+              </div>
+
+              <!-- notifications -->
+              <button class="p-2 rounded-full hover:bg-gray-100">
+                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                </svg>
+              </button>
+
+              <!-- profile -->
+              <div class="flex items-center space-x-3">
+                <div class="text-right hidden md:block">
+                  <div class="text-sm font-medium">{{ user.username|default:"Anna Cat" }}</div>
+                  <div class="text-xs muted">Admin</div>
+                </div>
+                <img src="https://i.pravatar.cc/40" alt="avatar" class="w-10 h-10 rounded-full border-2 border-white shadow-sm" />
+              </div>
+            </div>
+          </div>
         </div>
-    </nav>
+      </header>
 
-    <!-- Main Content -->
-    <main class="container mx-auto p-6 flex-grow">
-        {% if messages %}
-            <div class="mb-4">
-                {% for message in messages %}
-                    <div class="bg-{{ message.tags }}-100 border-l-4 border-{{ message.tags }}-500 text-{{ message.tags }}-700 p-4" role="alert">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-            </div>
-        {% endif %}
-        {% block content %}
-        {% endblock %}
-    </main>
+      <!-- PAGE CONTENT -->
+      <main class="flex-1 overflow-y-auto py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {% block content %}{% endblock %}
+        </div>
+      </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white text-center p-4">
-        <p>&copy; {% now "Y" %} Restaurant POS SaaS. All rights reserved.</p>
-    </footer>
+      <footer class="bg-white border-t">
+        <div class="max-w-7xl mx-auto px-4 py-3 text-xs text-gray-500">© {% now "Y" %} Restaurant POS</div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- dashboard JS loaded at the end -->
+  <script src="{% static 'js/dashboard.js' %}"></script>
+  {% block scripts %}{% endblock %}
 </body>
 </html>

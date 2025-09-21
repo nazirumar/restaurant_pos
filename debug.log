@@ -1338,3 +1338,2544 @@ Traceback (most recent call last):
     raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
 django.template.exceptions.TemplateSyntaxError: Invalid filter: 'multiply'
 "GET /orders/3/ HTTP/1.1" 500 254240
+Internal Server Error: /orders/3/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 976, in do_if
+    nodelist = parser.parse(("endif",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'multiply'
+"GET /orders/3/ HTTP/1.1" 500 253778
+Internal Server Error: /admin/inventory/inventoryitem/add/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\options.py", line 683, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'is_low_stock_display'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\utils.py", line 290, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\utils.py", line 330, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\options.py", line 685, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: InventoryItem has no field named 'is_low_stock_display'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 925, in _resolve_lookup
+    current = current()
+              ^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\helpers.py", line 275, in contents
+    f, attr, value = lookup_field(field, obj, model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\utils.py", line 299, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\inventory\admin.py", line 24, in is_low_stock_display
+    return obj.is_low_stock()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\inventory\models.py", line 22, in is_low_stock
+    return self.stock_level < self.low_stock_threshold
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+"GET /admin/inventory/inventoryitem/add/ HTTP/1.1" 500 614088
+Internal Server Error: /admin/inventory/inventoryitem/add/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\options.py", line 683, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'is_low_stock_display'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\utils.py", line 290, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\utils.py", line 330, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\options.py", line 685, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: InventoryItem has no field named 'is_low_stock_display'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 925, in _resolve_lookup
+    current = current()
+              ^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\helpers.py", line 275, in contents
+    f, attr, value = lookup_field(field, obj, model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\utils.py", line 299, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\inventory\admin.py", line 24, in is_low_stock_display
+    return obj.low_stock_threshold()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'int' object is not callable
+"GET /admin/inventory/inventoryitem/add/ HTTP/1.1" 500 611150
+Internal Server Error: /admin/inventory/inventoryitem/add/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 925, in _resolve_lookup
+    current = current()
+              ^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\helpers.py", line 287, in contents
+    result_repr = _boolean_icon(value)
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 183, in _boolean_icon
+    "admin/img/icon-%s.svg" % {True: "yes", False: "no", None: "unknown"}[field_val]
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: <bound method InventoryItem.is_low_stock of <InventoryItem: InventoryItem object (None)>>
+"GET /admin/inventory/inventoryitem/add/ HTTP/1.1" 500 590846
+Internal Server Error: /admin/inventory/inventoryitem/add/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\options.py", line 683, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'is_low_stock_display'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\utils.py", line 290, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\utils.py", line 330, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\options.py", line 685, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: InventoryItem has no field named 'is_low_stock_display'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 925, in _resolve_lookup
+    current = current()
+              ^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\helpers.py", line 275, in contents
+    f, attr, value = lookup_field(field, obj, model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\utils.py", line 299, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\inventory\admin.py", line 24, in is_low_stock_display
+    return obj.is_low_stock
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\inventory\models.py", line 23, in is_low_stock
+    return self.stock_level < self.low_stock_threshold
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+"GET /admin/inventory/inventoryitem/add/ HTTP/1.1" 500 614148
+Internal Server Error: /admin/inventory/inventoryitem/add/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\options.py", line 683, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'is_low_stock_display'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\utils.py", line 290, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\utils.py", line 330, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\options.py", line 685, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: InventoryItem has no field named 'is_low_stock_display'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 925, in _resolve_lookup
+    current = current()
+              ^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\helpers.py", line 275, in contents
+    f, attr, value = lookup_field(field, obj, model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\utils.py", line 299, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\inventory\admin.py", line 24, in is_low_stock_display
+    return obj.is_low_stock
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\inventory\models.py", line 23, in is_low_stock
+    return self.stock_level < self.low_stock_threshold
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+"GET /admin/inventory/inventoryitem/add/ HTTP/1.1" 500 614148
+Internal Server Error: /menu/create/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NotNullViolation: null value in column "quantity" of relation "menu_menuitemingredient" violates not-null constraint
+DETAIL:  Failing row contains (2, null, 2, 2).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\menu\views.py", line 33, in form_valid
+    return super().form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\edit.py", line 133, in form_valid
+    self.object = form.save()
+                  ^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\forms\models.py", line 555, in save
+    self._save_m2m()
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\forms\models.py", line 536, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\fields\related.py", line 2039, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 1355, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 1256, in add
+    self._add_items(
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 1551, in _add_items
+    self.through._default_manager.using(db).bulk_create(
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\query.py", line 823, in bulk_create
+    returned_columns = self._batched_insert(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\query.py", line 1896, in _batched_insert
+    self._insert(
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: null value in column "quantity" of relation "menu_menuitemingredient" violates not-null constraint
+DETAIL:  Failing row contains (2, null, 2, 2).
+
+"POST /menu/create/ HTTP/1.1" 500 196755
+Internal Server Error: /menu/create/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "menu_menuitem_tenant_id_name_18e910ff_uniq"
+DETAIL:  Key (tenant_id, name)=(2, Cake) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\menu\views.py", line 33, in form_valid
+    return super().form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\edit.py", line 133, in form_valid
+    self.object = form.save()
+                  ^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\forms\models.py", line 554, in save
+    self.instance.save()
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "menu_menuitem_tenant_id_name_18e910ff_uniq"
+DETAIL:  Key (tenant_id, name)=(2, Cake) already exists.
+
+"POST /menu/create/ HTTP/1.1" 500 186172
+Internal Server Error: /reports/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: placeholder.html, reports/salesreport_list.html
+"GET /reports/ HTTP/1.1" 500 91808
+Internal Server Error: /admin/orders/orderitem/add/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NotNullViolation: null value in column "price" of relation "orders_orderitem" violates not-null constraint
+DETAIL:  Failing row contains (1, 1, null, 2, 3).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\options.py", line 1984, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\options.py", line 1843, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\options.py", line 1894, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\options.py", line 1314, in save_model
+    obj.save()
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: null value in column "price" of relation "orders_orderitem" violates not-null constraint
+DETAIL:  Failing row contains (1, 1, null, 2, 3).
+
+"POST /admin/orders/orderitem/add/ HTTP/1.1" 500 207882
+Internal Server Error: /admin/orders/order/1/change/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NotNullViolation: null value in column "price" of relation "orders_orderitem" violates not-null constraint
+DETAIL:  Failing row contains (2, 1, null, 2, 1).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\options.py", line 1987, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\options.py", line 1843, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\options.py", line 1895, in _changeform_view
+    self.save_related(request, form, formsets, not add)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\options.py", line 1342, in save_related
+    self.save_formset(request, form, formset, change=change)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\options.py", line 1330, in save_formset
+    formset.save()
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\forms\models.py", line 796, in save
+    return self.save_existing_objects(commit) + self.save_new_objects(commit)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\forms\models.py", line 959, in save_new_objects
+    self.new_objects.append(self.save_new(form, commit=commit))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\forms\models.py", line 1157, in save_new
+    return super().save_new(form, commit=commit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\forms\models.py", line 769, in save_new
+    return form.save(commit=commit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\forms\models.py", line 554, in save
+    self.instance.save()
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: null value in column "price" of relation "orders_orderitem" violates not-null constraint
+DETAIL:  Failing row contains (2, 1, null, 2, 1).
+
+"POST /admin/orders/order/1/change/ HTTP/1.1" 500 236582
+Internal Server Error: /admin/orders/order/4/change/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NotNullViolation: null value in column "price" of relation "orders_orderitem" violates not-null constraint
+DETAIL:  Failing row contains (3, 1, null, 1, 4).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\options.py", line 1987, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\options.py", line 1843, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\options.py", line 1895, in _changeform_view
+    self.save_related(request, form, formsets, not add)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\options.py", line 1342, in save_related
+    self.save_formset(request, form, formset, change=change)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\admin\options.py", line 1330, in save_formset
+    formset.save()
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\forms\models.py", line 796, in save
+    return self.save_existing_objects(commit) + self.save_new_objects(commit)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\forms\models.py", line 959, in save_new_objects
+    self.new_objects.append(self.save_new(form, commit=commit))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\forms\models.py", line 1157, in save_new
+    return super().save_new(form, commit=commit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\forms\models.py", line 769, in save_new
+    return form.save(commit=commit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\forms\models.py", line 554, in save
+    self.instance.save()
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: null value in column "price" of relation "orders_orderitem" violates not-null constraint
+DETAIL:  Failing row contains (3, 1, null, 1, 4).
+
+"POST /admin/orders/order/4/change/ HTTP/1.1" 500 236558
+Internal Server Error: /orders/1/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 976, in do_if
+    nodelist = parser.parse(("endif",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'multiply'
+"GET /orders/1/ HTTP/1.1" 500 253634
+Internal Server Error: /orders/1/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 1035, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'custom_filters'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 1097, in load
+    lib = find_library(parser, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 1037, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'custom_filters' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+"GET /orders/1/ HTTP/1.1" 500 199726
+Internal Server Error: /reports/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: placeholder.html, reports/salesreport_list.html
+"GET /reports/ HTTP/1.1" 500 91945
+Internal Server Error: /reports/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: placeholder.html, reports/salesreport_list.html
+"GET /reports/ HTTP/1.1" 500 91832
+Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\base.py", line 228, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\restaurant_pos\views.py", line 29, in get_context_data
+    today = date.today()
+            ^^^^
+NameError: name 'date' is not defined
+"GET /dashboard/ HTTP/1.1" 500 94549
+Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\base.py", line 228, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\restaurant_pos\views.py", line 29, in get_context_data
+    ).select_related('ingredient')
+            ^^^^
+NameError: name 'date' is not defined
+"GET /dashboard/ HTTP/1.1" 500 94593
+Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\base.py", line 228, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\restaurant_pos\views.py", line 31, in get_context_data
+    ctx['recent_orders'] = Order.objects.filter(tenant=tenant).order_by('-created_at')[:5].values(
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\sql\query.py", line 2050, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'description' into field. Choices are: created_at, id, items, payment, status, table, table_id, tenant, tenant_id, total, waiter, waiter_id
+"GET /dashboard/ HTTP/1.1" 500 141801
+Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\generic\base.py", line 228, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\restaurant_pos\views.py", line 31, in get_context_data
+    ctx['recent_orders'] = Order.objects.filter(tenant=tenant).order_by('-created_at')[:5].values(
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\sql\query.py", line 2050, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'items_count' into field. Choices are: created_at, id, items, name, payment, status, table, table_id, tenant, tenant_id, total, waiter, waiter_id
+"GET /dashboard/ HTTP/1.1" 500 141822
+Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 577, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 91: 'static'. Did you forget to register or load this tag?
+"GET /dashboard/ HTTP/1.1" 500 210721
+Internal Server Error: /reports/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: placeholder.html, reports/salesreport_list.html
+"GET /reports/ HTTP/1.1" 500 91920
+Internal Server Error: /admin/inventory/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\middleware\main.py", line 43, in process_request
+    domain_model = get_tenant_domain_model()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\utils.py", line 25, in get_tenant_domain_model
+    return get_model(settings.TENANT_DOMAIN_MODEL)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\conf\__init__.py", line 83, in __getattr__
+    val = getattr(_wrapped, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Settings' object has no attribute 'TENANT_DOMAIN_MODEL'
+"GET /admin/inventory/ HTTP/1.1" 500 82922
+Internal Server Error: /admin/inventory/inventoryitem/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\middleware\main.py", line 43, in process_request
+    domain_model = get_tenant_domain_model()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\utils.py", line 25, in get_tenant_domain_model
+    return get_model(settings.TENANT_DOMAIN_MODEL)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\conf\__init__.py", line 83, in __getattr__
+    val = getattr(_wrapped, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Settings' object has no attribute 'TENANT_DOMAIN_MODEL'
+"GET /admin/inventory/inventoryitem/ HTTP/1.1" 500 82948
+Internal Server Error: /admin/inventory/inventoryitem/1/change/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\middleware\main.py", line 43, in process_request
+    domain_model = get_tenant_domain_model()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\utils.py", line 25, in get_tenant_domain_model
+    return get_model(settings.TENANT_DOMAIN_MODEL)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\conf\__init__.py", line 83, in __getattr__
+    val = getattr(_wrapped, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Settings' object has no attribute 'TENANT_DOMAIN_MODEL'
+"GET /admin/inventory/inventoryitem/1/change/ HTTP/1.1" 500 83025
+Internal Server Error: /admin/inventory/inventoryitem/1/change/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\middleware\main.py", line 43, in process_request
+    domain_model = get_tenant_domain_model()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\utils.py", line 25, in get_tenant_domain_model
+    return get_model(settings.TENANT_DOMAIN_MODEL)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\conf\__init__.py", line 83, in __getattr__
+    val = getattr(_wrapped, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Settings' object has no attribute 'TENANT_DOMAIN_MODEL'
+"GET /admin/inventory/inventoryitem/1/change/ HTTP/1.1" 500 83293
+Internal Server Error: /admin/inventory/inventoryitem/1/change/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\middleware\main.py", line 43, in process_request
+    domain_model = get_tenant_domain_model()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\utils.py", line 25, in get_tenant_domain_model
+    return get_model(settings.TENANT_DOMAIN_MODEL)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\conf\__init__.py", line 83, in __getattr__
+    val = getattr(_wrapped, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Settings' object has no attribute 'TENANT_DOMAIN_MODEL'
+"GET /admin/inventory/inventoryitem/1/change/ HTTP/1.1" 500 83293
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\middleware\main.py", line 43, in process_request
+    domain_model = get_tenant_domain_model()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\utils.py", line 25, in get_tenant_domain_model
+    return get_model(settings.TENANT_DOMAIN_MODEL)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\conf\__init__.py", line 83, in __getattr__
+    val = getattr(_wrapped, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Settings' object has no attribute 'TENANT_DOMAIN_MODEL'
+"GET /admin/ HTTP/1.1" 500 82670
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\middleware\main.py", line 43, in process_request
+    domain_model = get_tenant_domain_model()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\utils.py", line 25, in get_tenant_domain_model
+    return get_model(settings.TENANT_DOMAIN_MODEL)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\conf\__init__.py", line 83, in __getattr__
+    val = getattr(_wrapped, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Settings' object has no attribute 'TENANT_DOMAIN_MODEL'
+"GET /admin/ HTTP/1.1" 500 82938
+Internal Server Error: /menu/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\middleware\main.py", line 43, in process_request
+    domain_model = get_tenant_domain_model()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\utils.py", line 25, in get_tenant_domain_model
+    return get_model(settings.TENANT_DOMAIN_MODEL)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\conf\__init__.py", line 83, in __getattr__
+    val = getattr(_wrapped, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Settings' object has no attribute 'TENANT_DOMAIN_MODEL'
+"GET /menu/ HTTP/1.1" 500 84904
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\library.py", line 321, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\templatetags\tenant.py", line 61, in is_public_schema
+    return not hasattr(context.request, 'tenant') or context.request.tenant.schema_name == get_public_schema_name()
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'schema_name'
+"GET /admin/ HTTP/1.1" 500 441177
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\library.py", line 321, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\templatetags\tenant.py", line 61, in is_public_schema
+    return not hasattr(context.request, 'tenant') or context.request.tenant.schema_name == get_public_schema_name()
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'schema_name'
+"GET /admin/ HTTP/1.1" 500 441177
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\template\library.py", line 321, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django_tenants\templatetags\tenant.py", line 61, in is_public_schema
+    return not hasattr(context.request, 'tenant') or context.request.tenant.schema_name == get_public_schema_name()
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'schema_name'
+"GET /admin/ HTTP/1.1" 500 441177
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+"GET /admin/ HTTP/1.1" 500 59
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+"GET /admin/ HTTP/1.1" 500 82820
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+"GET /admin/ HTTP/1.1" 500 82507
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+"GET /admin/ HTTP/1.1" 500 82644
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+"GET /admin/ HTTP/1.1" 500 82644
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+"GET /admin/ HTTP/1.1" 500 82644
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+"GET /admin/ HTTP/1.1" 500 82820
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+"GET /admin/ HTTP/1.1" 500 82644
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\restaurant_pos\urls.py", line 15, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+"GET /admin/ HTTP/1.1" 500 85821
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+"GET /admin/ HTTP/1.1" 500 82820
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+"GET /admin/ HTTP/1.1" 500 82820
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nazbeen Ai\Documents\My Websites\restaurant_pos\.pos_venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+"GET /admin/ HTTP/1.1" 500 82820
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.

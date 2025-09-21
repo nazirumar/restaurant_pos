@@ -1,102 +1,99 @@
 {% extends 'base.html' %}
-
-{% block title %}Dashboard - Restaurant POS{% endblock %}
+{% block title %}Dashboard - POS{% endblock %}
 
 {% block content %}
-<div class="bg-white rounded-lg shadow-lg p-6">
-    <h1 class="text-2xl font-bold text-gray-800 mb-6">Dashboard</h1>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-    {% if error %}
-        <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4" role="alert">
-            {{ error }}
+  <!-- Stats Cards -->
+  <div class="bg-yellow-100 p-6 rounded-xl shadow text-center">
+    <h3 class="text-gray-700">Total Sales</h3>
+    <p class="text-2xl font-bold">${{ total_sales|default:"0" }}</p>
+  </div>
+  <div class="bg-blue-100 p-6 rounded-xl shadow text-center">
+    <h3 class="text-gray-700">Maintenance Cost</h3>
+    <p class="text-2xl font-bold">${{ maintenance_cost|default:"0" }}</p>
+  </div>
+  <div class="bg-pink-100 p-6 rounded-xl shadow text-center">
+    <h3 class="text-gray-700">Revenue</h3>
+    <p class="text-2xl font-bold">${{ revenue|default:"0" }}</p>
+  </div>
+</div>
+
+<!-- Recent Orders -->
+<div class="mt-8 bg-white rounded-xl shadow p-6">
+  <h2 class="text-lg font-bold mb-4">Recent Orders</h2>
+  <div class="overflow-x-auto">
+    <table class="w-full border-collapse">
+      <thead>
+        <tr class="bg-gray-100 text-left">
+          <th class="p-3">Item</th>
+          <th class="p-3">Total Items</th>
+          <th class="p-3">Sale</th>
+          <th class="p-3">Remaining</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for order in recent_orders %}
+        <tr class="border-b">
+          <td class="p-3">{{ order.item }}</td>
+          <td class="p-3">{{ order.total_items }}</td>
+          <td class="p-3">${{ order.total_sale }}</td>
+          <td class="p-3">{{ order.remaining }}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="4" class="text-center p-4 text-gray-500">No recent orders</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Bottom Section -->
+<div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+  <!-- Favourite Food -->
+  <div class="bg-white p-6 rounded-xl shadow">
+    <h2 class="font-bold mb-4">Favourite Food</h2>
+    <ul class="space-y-2">
+      {% for food in favourite_food %}
+      <li class="flex justify-between">
+        <span>{{ food.name }}</span>
+        <span class="text-gray-500">{{ food.percent }}% ({{ food.count }})</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- Customer Stats -->
+  <div class="bg-white p-6 rounded-xl shadow">
+    <h2 class="font-bold mb-4">Customer Stat’s</h2>
+    <div class="grid grid-cols-7 gap-2 text-center text-xs">
+      {% for hour in hours %}
+      <div class="bg-indigo-100 p-4 rounded {{ hour.active|yesno:'bg-indigo-400 text-white,' }}">
+        {{ hour.label }}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Employees -->
+  <div class="bg-white p-6 rounded-xl shadow">
+    <h2 class="font-bold mb-4">Employee</h2>
+    <ul class="space-y-3">
+      {% for emp in employees %}
+      <li class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <img src="{{ emp.avatar }}" class="w-8 h-8 rounded-full">
+          <div>
+            <p class="font-semibold">{{ emp.name }}</p>
+            <span class="text-sm text-gray-500">{{ emp.role }}</span>
+          </div>
         </div>
-    {% else %}
-        <!-- Quick Stats -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-            <div class="bg-indigo-100 p-4 rounded-lg text-center">
-                <h3 class="text-lg font-semibold text-indigo-800">Pending Orders</h3>
-                <p class="text-2xl font-bold">{{ orders|length }}</p>
-            </div>
-            <div class="bg-yellow-100 p-4 rounded-lg text-center">
-                <h3 class="text-lg font-semibold text-yellow-800">Low Stock Items</h3>
-                <p class="text-2xl font-bold">
-                    {% with low_stock=inventory_items|length %}
-                        {{ low_stock }}
-                    {% endwith %}
-                </p>
-            </div>
-            <div class="bg-green-100 p-4 rounded-lg text-center">
-                <h3 class="text-lg font-semibold text-green-800">Today's Sales</h3>
-                <p class="text-2xl font-bold">$ {{ today_sales|default:0 }}</p>
-            </div>
-        </div>
+        <span class="text-sm text-gray-600">{{ emp.hours }} hr/Week</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 
-        <!-- Pending Orders Table -->
-        <h2 class="text-xl font-semibold text-gray-800 mb-4">Pending Orders</h2>
-        {% if orders %}
-            <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse">
-                    <thead>
-                        <tr class="bg-gray-200">
-                            <th class="p-3">Order ID</th>
-                            <th class="p-3">Table</th>
-                            <th class="p-3">Waiter</th>
-                            <th class="p-3">Total</th>
-                            <th class="p-3">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for order in orders %}
-                            <tr class="border-b">
-                                <td class="p-3">{{ order.id }}</td>
-                                <td class="p-3">{{ order.table.number|default:"N/A" }}</td>
-                                <td class="p-3">{{ order.waiter.username|default:"N/A" }}</td>
-                                <td class="p-3">$ {{ order.total }}</td>
-                                <td class="p-3">
-                                    <a href="{% url 'order_detail' order.id %}" class="text-indigo-600 hover:underline">View</a>
-                                    {% if user.role in 'manager,owner,waiter' %}
-                                        <a href="{% url 'order_update' order.id %}" class="text-indigo-600 hover:underline ml-2">Update</a>
-                                    {% endif %}
-                                </td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        {% else %}
-            <p class="text-gray-600">No pending orders.</p>
-        {% endif %}
-
-        <!-- Low Stock Alerts -->
-        <h2 class="text-xl font-semibold text-gray-800 mt-6 mb-4">Low Stock Alerts</h2>
-        {% if inventory_items %}
-            <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse">
-                    <thead>
-                        <tr class="bg-gray-200">
-                            <th class="p-3">Ingredient</th>
-                            <th class="p-3">Stock Level</th>
-                            <th class="p-3">Threshold</th>
-                            <th class="p-3">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for item in inventory_items %}
-                            <tr class="border-b">
-                                <td class="p-3">{{ item.ingredient.name }}</td>
-                                <td class="p-3">{{ item.stock_level }}</td>
-                                <td class="p-3">{{ item.low_stock_threshold }}</td>
-                                <td class="p-3">
-                                    <a href="{% url 'inventory_update' item.id %}" class="text-indigo-600 hover:underline">Update</a>
-                                </td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        {% else %}
-            <p class="text-gray-600">No low stock items.</p>
-        {% endif %}
-    {% endif %}
 </div>
 {% endblock %}

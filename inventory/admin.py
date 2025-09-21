@@ -21,6 +21,6 @@ class InventoryItemAdmin(admin.ModelAdmin):
     readonly_fields = ('is_low_stock_display',)
 
     def is_low_stock_display(self, obj):
-        return obj.is_low_stock()
+        return obj.is_low_stock
     is_low_stock_display.boolean = True
     is_low_stock_display.short_description = 'Low Stock?'

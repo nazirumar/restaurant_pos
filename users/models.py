@@ -37,8 +37,3 @@ class User(AbstractUser):
 
 
 
-
-    def save(self, *args, **kwargs):
-        if self.is_default:
-            Tenant.objects.filter(is_default=True).update(is_default=False)
-        super().save(*args, **kwargs)

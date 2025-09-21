@@ -44,7 +44,7 @@
                                 <td class="p-3">{{ item.menu_item.name|default:"N/A" }}</td>
                                 <td class="p-3">{{ item.quantity }}</td>
                                 <td class="p-3">$ {{ item.price }}</td>
-                                <td class="p-3">$ {{ item.subtotal }}</td>
+                                <td class="p-3">$ {{ item.subtotal|floatformat:2 }}</td>
                             </tr>
                         {% endfor %}
                     </tbody>

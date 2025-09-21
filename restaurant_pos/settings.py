@@ -18,35 +18,61 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='*').split(',')
 
 # Application definition
 
-INSTALLED_APPS = [
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.sessions",
-    "django.contrib.messages",
-    "django.contrib.staticfiles",
+# Tenancy settings
+TENANT_MODEL = 'tenants.Tenant'  # App and model for tenant
+TENANT_DOMAIN_MODEL = 'tenants.Domain'  # Model for domain mapping
+PUBLIC_SCHEMA_NAME = 'public'  # Shared schema for global data
+
+TENANT_APPS = [
+    'menu',      # Tenant-specific menu items
+    'orders',    # Tenant-specific orders
+    'inventory', # Tenant-specific inventory
+    'employees', # Tenant-specific employees
+    'reports'
+
+]
+
+SHARED_APPS = [
+    'django_tenants',  # Must be before django.contrib.admin
     'tenants',
     'users',
     'menu',
-    'inventory',
     'orders',
-    'payments',
+    'inventory',
     'employees',
     'reports',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    
 ]
+# Combine SHARED_APPS and TENANT_APPS for INSTALLED_APPS
+INSTALLED_APPS = list(SHARED_APPS) + [app for app in TENANT_APPS if app not in SHARED_APPS]
 
 MIDDLEWARE = [
+    'django_tenants.middleware.main.TenantMainMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
-    'restaurant_pos.middleware.TenantMiddleware',
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+
+
+# Public schema URL configuration
+PUBLIC_SCHEMA_URLCONF = 'restaurant_pos.urls_public'
+
+# Optional: Fallback domain for public schema (e.g., localhost)
+TENANT_DOMAIN_FOR_PUBLIC_URL = 'localhost'  # Treat localhost as public schema
+
 ROOT_URLCONF = "restaurant_pos.urls"
+
 
 TEMPLATES = [
     {
@@ -68,10 +94,14 @@ WSGI_APPLICATION = "restaurant_pos.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+DATABASE_ROUTERS = (
+    'django_tenants.routers.TenantSyncRouter',
+)
+
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django_tenants.postgresql_backend',
         'NAME': config('DB_NAME'),
         'USER': config('DB_USER'),
         'PASSWORD': config('DB_PASSWORD'),
@@ -112,7 +142,12 @@ USE_I18N = True
 USE_TZ = True
 
 
-STATIC_URL = 'static/'
+# Static and media settings
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
