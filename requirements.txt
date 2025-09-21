@@ -1,5 +1,5 @@
 Django==5.2.6
 psycopg2-binary==2.9.9
-gunicorn==22.0.0
+gunicorn==23.0.0
 python-decouple==3.8
 # Add boto3 if using AWS S3 for static, etc.
