@@ -1,0 +1,10 @@
+[
+  {
+    "model": "tenants.tenant",
+    "pk": 2,
+    "fields": {
+      "name": "Demo Restaurant",
+      "subdomain": "demo"
+    }
+  }
+]

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Menu Item Details - Restaurant POS{% endblock %}
+
+{% block content %}
+<div class="bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-2xl font-bold text-gray-800 mb-6">Menu Item: {{ object.name }}</h1>
+
+    {% if error %}
+        <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4" role="alert">
+            {{ error }}
+        </div>
+    {% else %}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div>
+                <p><strong>Name:</strong> {{ object.name }}</p>
+                <p><strong>Category:</strong> {{ object.category.name|default:"N/A" }}</p>
+                <p><strong>Price:</strong> $ {{ object.price }}</p>
+                <p><strong>Allergens:</strong> {% for allergen in object.allergens.all %}{{ allergen.name }}{% if not forloop.last %}, {% endif %}{% empty %}None{% endfor %}</p>
+                <p><strong>Ingredients:</strong> {% for ingredient in object.ingredients.all %}{{ ingredient.name }}{% if not forloop.last %}, {% endif %}{% empty %}None{% endfor %}</p>
+            </div>
+            <div>
+                {% if user.role in 'manager,owner' %}
+                    <a href="{% url 'menu_update' object.id %}" class="bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">Edit</a>
+                    <a href="{% url 'menu_delete' object.id %}" class="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 ml-2">Delete</a>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
